@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Welcome to our furniture store, where comfort meets style. We offer a wide range of quality
+    furniture designed to make your home beautiful, comfortable and welcoming. Explore our collection of modern sofas, beds, 
+    dining tables and more at affordable prices.">
+
+    <meta name="keywords" content="quality furniture, affordable furniture, modern furniture.">
+
+    <!-- Lightbox CSS --> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- jQuery --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+    <!-- Lightbox JavaScript --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+    
+    <link rel="stylesheet" href="css_assets/styles.css">
+    <title>Furnimart - Home</title>
+
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <img src="_images/logo/furnimart.png" alt="Furnimart Logo" width="150">
+        <nav>
+            <ul>
+                <li><a href ="index.html">Home</a></li>
+
+                <li><a href ="aboutus.html">About Us</a></li>
+
+                 <li><a href ="products.html">Products</a></li>
+
+                <li><a href ="services.html">Services</a></li>
+
+                <li><a href ="enquiry.html">Enquiry</a></li>
+
+                <li><a href ="contact.html">Contact</a></li>
+
+            
+            </ul>
+        </nav>
+
+        <form class="site-search" action="products.html" method="get">
+            <input type="search" name="search" placeholder="Search for furniture..." aria-label="Search for furniture">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+    <!--Hero Section-->
+    <section class="hero">
+        <img src="_images/heroshot/hero.png" alt="Kitchen" class="hero-img">
+
+        <div class="hero-content">
+            <h1>Welcome to Furnimart</h1>
+            <p>Create your dream home with our quality furniture. Designed perfectly to reflect your personality. We aim to make your home beautiful, stylish and comfortable. </p>
+            <a href="products.html" class="shop-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!--Featured Products Section-->
+    <section class="featured">
+        <h2>FEATURED <span>PRODUCTS</span></h2>
+
+            <article id="col1">
+                <h3>Bedroom</h3>
+                <a href="_images/beds/bedroom1_large.png" data-lightbox="images" data-title="Alicia Bedroom Suite">
+                    <img src="_images/beds/bedroom1.png" alt="Bedroom Suite ">
+                </a>
+                <a href="_images/beds/bedroom2_large.png" data-lightbox="images" data-title="Divine Bedroom Suite">
+                    <img src="_images/beds/bedroom2.png" alt="Bedroom Suite">
+                </a>    
+            </article>
+
+            <article id="col2">
+                <h3>Couches</h3>
+                <a href="_images/couches/couch1_large.png" data-lightbox="images" data-title="Brown Leather Couch">
+                    <img src="_images/couches/couch1.png" alt="Sofa couch">
+                </a>
+                <a href="_images/couches/couch2_large.png" data-lightbox="images" data-title="Brown Leather Couch">
+                    <img src="_images/couches/couch2.png" alt="Sofa couch">
+                </a>
+            </article>
+
+            <article id="col3">
+                <h3>Wardrobe</h3>
+                <a href="_images/wardrobes/wardrobe1_large.png" data-lightbox="images" data-title="White Wooden Wardrobe">
+                    <img src="_images/wardrobes/wardrobe1.png" alt="Wardrobe">
+                </a>
+                <a href="_images/wardrobes/wardrobe2_large.png" data-lightbox="images" data-title="Brown Wooden Wardrobe">
+                    <img src="_images/wardrobes/wardrobe2.png" alt="Wardrobe">
+                </a>
+            </article>
+    </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+
+            <div>
+                <h3>Furnimart</h3>
+                <p>Quality furniture for your home.</p>
+            </div>
+
+            <!--Quick Links-->
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h1>Contact Us</h1>
+                <p> 012 927 4653</p>
+            </div>
+        </div>
+
+        <p>
+			<script>
+				var myDate = new Date();
+				document.write(myDate.getFullYear());
+				document.write(" Furnimart &copy; - All Rights Reserved.");
+				var myLastModifiedDate = new Date(document.lastModified);
+				document.write(" The Web Page Was Last Modified: " +myLastModifiedDate.toDateString());
+			</script>
+        </p>    
+
+    </footer>
+    
+    <script src="lightbox.js"></script>
+</body>
+</html>
+
+
+   

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover our wide selection of furniture for every room in your home. From comfortable 
+    sofas and stylish coffee tables to modern beds and dining tables, we have something for everyone. Our products combine quality
+    ,classy and attractive designs.">
+
+    <meta name="keywords" content="sofas, beds, dining sets, coffee tables, lights, chairs, kitchen and wardrobes.">
+
+    <!-- Lightbox CSS --> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- jQuery --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+    <!-- Lightbox JavaScript --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <link rel="stylesheet" href="css_assets/styles.css">
+    <title>Furnimart - Products</title>
+</head>
+<body>
+    <header>
+        <img src="_images/logo/furnimart.png" alt="Furnimart Logo" width="150">
+        <nav>
+            <ul>
+                <li><a href ="index.html">Home</a></li>
+
+                <li><a href ="aboutus.html">About Us</a></li>
+
+                 <li><a href ="products.html">Products</a></li>
+
+                <li><a href ="services.html">Services</a></li>
+
+                <li><a href ="enquiry.html">Enquiry</a></li>
+
+                <li><a href ="contact.html">Contact</a></li>
+
+            
+            </ul>
+        </nav>
+
+    </header>
+    
+    <main>
+    
+    <h1>OUR PRODUCTS</h1>
+    <p>Explore our beautiful and stylish furniture.</p>
+    <p id="searchMessage" aria-live="polite"></p>
+
+    <table>
+        </tr>
+
+            <td class="product">
+                <img src="_images/chairs/chair1.png" alt="Arm Chair" width="500">
+                <br>
+                <strong>Blue arm chair</strong>
+                <br>
+                R6,999
+            </td>
+
+            <td class="product">
+                <img src="_images/coffeetables/coffeetable1.png" alt="Coffee table" width="500">
+                <br>
+                <strong>White Golden Coffee Table</strong>
+                <br>
+                R8,999
+            </td>
+
+            <td class="product">
+                <img src="_images/coffeetables/coffeetable2.png" alt="Wooden coffee table" width="500">
+                <br>
+                <strong>Wooden Coffee Table</strong>
+                <br>
+                R4,499
+            </td>
+        </tr>   
+        
+        <tr>
+            <td class="product">
+                <img src="_images/kitchen/kitchen1.png" alt="Kitchen" width="500">
+                <br>
+                <strong>Royal Kitchen</strong>
+                <br>
+                R25,999
+            </td>
+
+            <td class="product">
+                <img src="_images/diningtables/diningtable1.png" alt="Dining chairs" width="500">
+                <br>
+                <strong>Glitz Dining Chairs</strong>
+                <br>
+                R15,999
+            </td>
+
+            <td class="product">
+                <img src="_images/diningtables/diningtable2.png" alt="Dining table"  class="responsive-image">
+                <br>
+                <strong>Wooden Dining Table</strong>
+                <br>
+                R12,999
+            </td>
+        </tr>
+    </table>  
+    
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+
+            <div>
+                <h3>Furnimart</h3>
+                <p>Quality furniture for your home.</p>
+            </div>
+
+            <!--Quick Links-->
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h1>Contact Us</h1>
+                <p> 012 927 4653</p>
+            </div>
+        </div>
+
+        <p>
+			<script>
+				var myDate = new Date();
+				document.write(myDate.getFullYear());
+				document.write(" Furnimart &copy; - All Rights Reserved.");
+				var myLastModifiedDate = new Date(document.lastModified);
+				document.write(" The Web Page Was Last Modified: " +myLastModifiedDate.toDateString());
+			</script>
+        </p>    
+
+    </footer>
+
+    <script>
+
+    // Get the search word from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const searchWord = urlParams.get("search");
+
+    // Get all products
+    const products = document.querySelectorAll(".product");
+
+    const message = document.getElementById("searchMessage");
+
+    let found = false;
+
+    // Check if the user searched for something
+    if (searchWord) {
+
+        products.forEach(function(product) {
+
+            // Get the product name
+            const productName = product.querySelector("strong").textContent.toLowerCase();
+
+            // Compare the product name with the search word
+            if (productName.includes(searchWord.toLowerCase())) {
+
+                product.style.display = "table-cell";
+                found = true;
+
+            } else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+        // Display a message if no product is found
+        if (!found) {
+
+            message.textContent = "Sorry, no products found!";
+
+        } else {
+
+            message.textContent = "Search results for: " + searchWord;
+
+        }
+
+    }
+
+    </script>
+    
+</body>
+</html>
